@@ -16,6 +16,8 @@ sudo createhomedir -c -u koolisw > /dev/null
 sudo dscl . -append /Groups/admin GroupMembership username
 
 #Enable VNC
+sudo systemsetup -setremotelogin on
+
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -allowAccessFor -allUsers -privs -all
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -clientopts -setvnclegacy -vnclegacy yes 
 
